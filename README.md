@@ -13,3 +13,14 @@ Implementar un sistema en Verilog que lea el valor de los switches de la FPGA DE
 * Código en Verilog <br/>
 
 *DESCRIPCIÓN DEL FUNCIONAMIENTO:* <br/>
+1. Los 10 switches de la FPGA representan un número en binario. <br/>
+2. El valor ingresado en los switches se convierte a decimal. <br/>
+3. Se muestra el número decimal en los displays de 7 segmentos. <br/>
+
+*DESARROLLO DE LA PRÁCTICA:* <br/>
+1. Definir las entradas y salidas: <br/>
+  * ENTRADAS:  <br/>
+  * SALIDAS: <br/>
+2. Convertir el número binario a decimal. <br/>
+3. Implementar un módulo para decodificar los valores y controlarlos en los displays. <br/>
+4. Instanciar módulos de 7 segmentos previamente diseñados para manejar la visualización en los datos. <br/>
