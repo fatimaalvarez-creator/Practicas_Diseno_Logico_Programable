@@ -35,9 +35,7 @@ Hacer un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que ayude a leer l
   * Se instancia un módulo decoder_7seg encargado de convertir los valores en señales adecuadas para los displays de 7 segmentos. <br/>
   * Cada display representa un dígito del número decimal. <br/>
 ![image](https://github.com/user-attachments/assets/4ce80e2d-0363-49c5-9b8e-67d572b57c63)
-
 <br/>
+
 *CONCLUSIÓN:* <br/>
 Este diseño permite representar un número binario de hasta 10 bits en formato decimal en los displays de 7 segmentos de la FPGA. Mediante la conversión basada en módulo y división, se extraen los dígitos individuales y se envían a los módulos de decodificación, facilitando una visualización clara e intuitiva. La modularidad del diseño permite escalarlo a un mayor número de bits o mejorar la lógica de control de los displays según sea necesario. <br/>
-
-
