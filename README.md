@@ -35,6 +35,7 @@ Hacer un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que ayude a leer l
   * Se instancia un módulo decoder_7seg encargado de convertir los valores en señales adecuadas para los displays de 7 segmentos. <br/>
   * Cada display representa un dígito del número decimal. <br/>
 ![image](https://github.com/user-attachments/assets/4ce80e2d-0363-49c5-9b8e-67d572b57c63)
+![image](https://github.com/user-attachments/assets/597f26d9-41f1-4a75-8484-451c00cd0c53)
 <br/>
 
 ## *CONCLUSIÓN:* <br/>
