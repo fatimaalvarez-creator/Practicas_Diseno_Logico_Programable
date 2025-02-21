@@ -30,6 +30,7 @@ Hacer un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que ayude a leer l
   * Se generan señales auxiliares para almacenar cada uno de estos valores (unidades, decenas, centenas y unidades de millar). <br/>
 3. Implementar un módulo para decodificar los valores y controlarlos en los displays: <br/>
 ![image](https://github.com/user-attachments/assets/0ea82eca-f09c-4941-905b-2a8627dcb3a8)
+![image](https://github.com/user-attachments/assets/2d6fd931-23fa-4d08-93d3-49ec6884a2db)
 
 4. Instanciar módulo de 7 segmentos para observar los datos: <br/>
   * Se instancia un módulo decoder_7seg encargado de convertir los valores en señales adecuadas para los displays de 7 segmentos. <br/>
