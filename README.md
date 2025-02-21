@@ -38,4 +38,4 @@ Hacer un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que ayude a leer l
 <br/>
 
 ## *CONCLUSIÓN:* <br/>
-Este diseño permite representar un número binario de hasta 10 bits en formato decimal en los displays de 7 segmentos de la FPGA. Mediante la conversión basada en módulo y división, se extraen los dígitos individuales y se envían a los módulos de decodificación, facilitando una visualización clara e intuitiva. La modularidad del diseño permite escalarlo a un mayor número de bits o mejorar la lógica de control de los displays según sea necesario. <br/>
+Este diseño permite convertir un número binario de hasta 10 bits (rango de 0 a 1023) en su equivalente decimal y mostrarlo en los displays de 7 segmentos de la FPGA. Utiliza operaciones de módulo (%) y división (/) para separar las unidades, decenas, centenas y unidades de millar, enviando cada valor a un decodificador específico para su visualización. Además, el diseño es flexible y escalable, permitiendo aumentar el número de bits y displays sin necesidad de reescribir todo el código. <br/>
