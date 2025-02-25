@@ -28,7 +28,7 @@ Hacer un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que ayude a leer l
 2. Convertir el número binario a decimal: <br/>
   * Se divide el número binario en unidades, decenas, centenas y unidades de millar utilizando operaciones de módulo y división. <br/>
   * Se generan señales auxiliares para almacenar cada uno de estos valores (unidades, decenas, centenas y unidades de millar). <br/>
-3. Implementar un módulo para decodificar los valores y controlarlos en los displays: <br/>
+3. Implementar un módulo para decodificar los valores y controlarlos en los displays. <br/>
 RTL VIEWER:
 ![image](https://github.com/user-attachments/assets/2d6fd931-23fa-4d08-93d3-49ec6884a2db)
 
