@@ -29,13 +29,13 @@ Hacer un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que ayude a leer l
   * Se divide el número binario en unidades, decenas, centenas y unidades de millar utilizando operaciones de módulo y división. <br/>
   * Se generan señales auxiliares para almacenar cada uno de estos valores (unidades, decenas, centenas y unidades de millar). <br/>
 3. Implementar un módulo para decodificar los valores y controlarlos en los displays: <br/>
-![image](https://github.com/user-attachments/assets/0ea82eca-f09c-4941-905b-2a8627dcb3a8)
+RTL VIEWER:
 ![image](https://github.com/user-attachments/assets/2d6fd931-23fa-4d08-93d3-49ec6884a2db)
 
 4. Instanciar módulo de 7 segmentos para observar los datos: <br/>
   * Se instancia un módulo decoder_7seg encargado de convertir los valores en señales adecuadas para los displays de 7 segmentos. <br/>
   * Cada display representa un dígito del número decimal. <br/>
-![image](https://github.com/user-attachments/assets/4ce80e2d-0363-49c5-9b8e-67d572b57c63)
+RTL VIEWER:
 ![image](https://github.com/user-attachments/assets/597f26d9-41f1-4a75-8484-451c00cd0c53)
 <br/>
 5. Mostramos la wave del testbench: <br/>
