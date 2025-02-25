@@ -1,0 +1,7 @@
+// Contador BCD con Up/Down
+module counter_up_down(
+    input clk, 
+    input rst, 
+    input enable,
+    input switch, // 0: down, 1: up
+    output reg [5:0] count // 6 bits, cuenta de 0 a 63
