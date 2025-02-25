@@ -39,7 +39,7 @@ RTL VIEWER:
 ![image](https://github.com/user-attachments/assets/597f26d9-41f1-4a75-8484-451c00cd0c53)
 <br/>
 5. Mostramos la wave del testbench: <br/>
-![image](https://github.com/user-attachments/assets/e1465456-c943-4058-a16f-3f9b9b0b2787)
+![image](https://github.com/user-attachments/assets/1d8a66c9-ebf6-4b7f-a484-3176afcfa293)
 <br/>
 
 ## *CONCLUSIÓN:* <br/>
