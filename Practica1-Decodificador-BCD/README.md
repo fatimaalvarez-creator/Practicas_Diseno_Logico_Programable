@@ -38,6 +38,8 @@ Hacer un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que ayude a leer l
 ![image](https://github.com/user-attachments/assets/4ce80e2d-0363-49c5-9b8e-67d572b57c63)
 ![image](https://github.com/user-attachments/assets/597f26d9-41f1-4a75-8484-451c00cd0c53)
 <br/>
+5. Mostramos la wave del testbench: <br/>
+
 
 ## *CONCLUSIÓN:* <br/>
 Este diseño permite convertir un número binario de hasta 10 bits (rango de 0 a 1023) en su equivalente decimal y mostrarlo en los displays de 7 segmentos de la FPGA. Utiliza operaciones de módulo (%) y división (/) para separar las unidades, decenas, centenas y unidades de millar, enviando cada valor a un decodificador específico para su visualización. Además, el diseño es flexible y escalable, permitiendo aumentar el número de bits y displays sin necesidad de reescribir todo el código. <br/>
