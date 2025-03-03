@@ -24,6 +24,9 @@ Diseñar e implementar un counter BCD con clock up-down en Verilog para la FPGA 
 ## *DESARROLLO DE LA PRÁCTICA:* <br/>
 ### 1. Divisor de reloj:  <br/>
 El reloj de la FPGA DE10-Lite opera a 50 MHz, es muy rápido para una visualización clara del conteo. Para solucionar esto, implementamos un divisor de reloj (clkdiv), el cual reduce la frecuencia de la señal de reloj y genera una señal de menor frecuencia. Esta nueva señal es utilizada por el contador para asegurar que los cambios en el valor sean perceptibles en los displays de 7 segmentos.  <br/>
+RTL VIEWER: <br/>
+![image](https://github.com/user-attachments/assets/eb23f6c4-bd5e-4bad-a872-b8a958dfca66)
+<br/>
 
 ### 2. Contador ascendente-descendente (Counter BCD)  <br/>
 El contador es un BCD (Binary-Coded Decimal) y permite contar en ambas direcciones según el control de entrada:  <br/>
@@ -34,9 +37,16 @@ El contador es un BCD (Binary-Coded Decimal) y permite contar en ambas direccion
 <br/> - Si está en bajo (0), el contador opera en modo descendente. <br/>
 <br/> - Si está en alto (1), el contador opera en modo ascendente. <br/>
 * Señal 'load': Permite cargar un valor específico en el contador, es útil par iniciar el conteo desde un número determinado en lugar de comenzar desde cero. <br/>
+RTL VIEWER: <br/>
+![image](https://github.com/user-attachments/assets/5c70b467-cb37-45e3-be30-e78adcd9a441)
+<br/>
 
 ### 3. Conversión y visualización en 7 segmentos  <br/>
 El valor BCD del contador debe ser convertido para los displays de 7 segmentos. Implementamos un decodificador BCD a 7 segmentos, fue el que realizamos en la práctica 1; lo qie hace es traducir el número binario en los segmentos correspondientes para mostrar de manera correcta los números del 0 al 9 en los displays de la FPGA.  <br/>
+RTL VIEWER: <br/>
+![image](https://github.com/user-attachments/assets/bb26dcfb-9a49-4ebb-b4f1-8d25ac6a576e)
+<br/>
+
 
 ### 4. Integración y funcionamiento del sistema <br/>
 El sistema tiene el siguiente funcionamiento: <br/>
@@ -44,7 +54,5 @@ El sistema tiene el siguiente funcionamiento: <br/>
 * El contador recibe el pulso de reloj dividido y opera en base a enable, up_down y load (counter_up_down). <br/>
 * El valor BCD del contador se envía al decodificador BCD a 7 segmentos (decoder_bcd). <br/>
 * El valor convertido es mostrado en los displays de 7 segmentos de la FPGA (decoder_7seg). <br/>
-RTL VIEWER: <br/>
-RTL VIEWER:
 
 ## *CONCLUSIÓN:* <br/>
