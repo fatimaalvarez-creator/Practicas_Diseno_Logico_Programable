@@ -43,3 +43,4 @@ RTL VIEWER: <br/>
 <br/>
 
 ## *CONCLUSIÓN:* <br/>
+Este proyecto demuestra el uso de Máquinas de Estados Finitos (FSM) en Verilog para la implementación de un sistema de password en la FPGA DE10-Lite. Implemente un diseño funcional en el que el usuario ingresa una secuencia de 4 valores, los cuales son validados con una clave predefinida y se muestra el resultado en los displays de 7 segmentos. Además, se implementó una función de reset, para permitir varios intentos.
