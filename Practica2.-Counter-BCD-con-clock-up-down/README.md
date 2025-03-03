@@ -7,6 +7,11 @@ A01645815 <br/>
 ## *OBJETIVO:* <br/>
 
 ## *MATERIALES NECESARIOS:* <br/>
+* Tarjeta FPGA DE10-Lite (10M50DAF484C7G). <br/>
+* Cable USB Blaster para la programación. <br/>
+* Software Intel Quartus Prime Lite. <br/>
+* Código en Verilog y TestBench. <br/>
+<br/>
 
 ## *DESCRIPCIÓN DEL FUNCIONAMIENTO:* <br/>
 
