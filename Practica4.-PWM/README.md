@@ -11,10 +11,20 @@ A01645815 <br/>
 ## *DESCRIPCIÓN DEL FUNCIONAMIENTO:* <br/>
 
 ## *DESARROLLO DE LA PRÁCTICA:* <br/>
+*** clkdiv_pwm
+RTL VIEWER:
+![image](https://github.com/user-attachments/assets/ba6fb8ac-910a-4b90-90cd-c9f9527ccf19)
+<br/>
+
+*** debouncer_pwm
+RTL VIEWER:
+![image](https://github.com/user-attachments/assets/010d8949-7761-46f6-a614-433307906b71)
+
+<br/>
+
+*** pwm
 RTL VIEWER: 
 ![image](https://github.com/user-attachments/assets/264d50d7-06df-413f-9cec-284e45f5ab1e)
 <br/>
-
-RTL VIEWER:
 
 ## *CONCLUSIÓN:* <br/>
