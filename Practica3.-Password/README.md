@@ -15,8 +15,8 @@ El objetivo es crear en Verilog un sistema de contraseña en la FPGA DE10-Lite u
 
 ## *DESCRIPCIÓN DEL FUNCIONAMIENTO:* <br/>
 1. Se debe ingresar una contraseña utilizando los switches de la FPGA. <br/>
-2. Validación de la contraseña de 4 valores, si es correcta despliega "Good", de lo contrario "Bad".<br/>
-3. Agregamos un reset al sistema para ingresar nuevamente la contraseña.<br/>
+2. El sistema validará la secuencia ingresada; si es correcta, desplegará "Good", de lo contrario, "Bad". <br/>
+3. Se incluye un reset para permitir nuevos intentos. <br/>
 
 ## *DESARROLLO DE LA PRÁCTICA:* <br/>
 El sistema de contraseña en la FPGA DE10-Lite operará mediante una Máquina de Estados Finitos (FSM), siguiendo los siguientes pasos: <br/>
@@ -28,8 +28,8 @@ RTL VIEWER: <br/>
 
 ### 2. Validación de la contraseña:
 * Una vez ingresados los 4 valores, el sistema comparará la secuencia ingresada con una clave predefinida almacenada en el código. <br/>
-* Si la secuencia ingresada es idéntica a la clave almacenada, se mostrará el mensaje "Good" en los displays de 7 segmentos. <br/>
-* Si en cualquier punto hay un error en la secuencia ingresada, el sistema inmediatamente mostrará "Bad" en los displays. <br/>
+- Si la secuencia ingresada es idéntica a la clave almacenada, se mostrará el mensaje "Good" en los displays de 7 segmentos. <br/>
+- Si en cualquier punto hay un error en la secuencia ingresada, el sistema inmediatamente mostrará "Bad" en los displays. <br/>
 RTL VIEWER: <br/>
 
 ### 3. Reinicio del sistema:
