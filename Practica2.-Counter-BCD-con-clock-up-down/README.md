@@ -23,8 +23,8 @@ El reloj de la FPGA DE10-Lite opera a 50 MHz, es muy rápido para una visualizac
 * El contador opera en código BCD (Binary-Coded Decimal) y permite contar en ambas direcciones según el control de entrada:  <br/>
 * Señal enable: Habilita o deshabilita el conteo. Cuando está en bajo, el contador se detiene, manteniendo el último valor.  <br/>
 * Señal up_down: Define la dirección del conteo.  <br/>
-<br/> * Si está en alto (1), el contador opera en modo ascendente.  <br/>
-<br/> * Si está en bajo (0), el contador opera en modo descendente.  <br/>
+<br/> ** Si está en alto (1), el contador opera en modo ascendente.  <br/>
+<br/> ** Si está en bajo (0), el contador opera en modo descendente.  <br/>
 * Señal load: Permite cargar un valor específico en el contador de forma síncrona. Esto es útil para iniciar el conteo desde un número determinado en lugar de comenzar desde cero.  <br/>
 
 ### 3. Conversión y visualización en 7 segmentos
