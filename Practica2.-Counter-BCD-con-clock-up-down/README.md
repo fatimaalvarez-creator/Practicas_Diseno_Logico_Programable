@@ -55,4 +55,9 @@ El sistema tiene el siguiente funcionamiento: <br/>
 * El valor BCD del contador se envía al decodificador BCD a 7 segmentos (decoder_bcd). <br/>
 * El valor convertido es mostrado en los displays de 7 segmentos de la FPGA (decoder_7seg). <br/>
 
+## 5. Mostramos la wave del testbench: <br/>
+
+<br/>
+
 ## *CONCLUSIÓN:* <br/>
+En esta práctica, diseñamos e implementamos un **contador BCD con un clock up-down** en Verilog para la FPGA DE10-Lite, integrando un divisor de reloj, control de dirección, carga de valores y visualización en displays de 7 segmentos. Esto permitió reforzar conceptos vistos teóricamente en clase, además de trabajar con los recursos de la FPGA, como el reloj, switches y displays. Las simulaciones y las pruebas físicas demostraron su correcto funcionamiento.
