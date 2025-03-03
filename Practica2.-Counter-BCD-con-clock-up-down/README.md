@@ -32,7 +32,7 @@ El contador es un BCD (Binary-Coded Decimal) y permite contar en ambas direccion
 ### 3. Conversión y visualización en 7 segmentos  <br/>
 El valor BCD del contador debe ser convertido para los displays de 7 segmentos. Implementamos un decodificador BCD a 7 segmentos, fue el que realizamos en la práctica 1; lo qie hace es traducir el número binario en los segmentos correspondientes para mostrar de manera correcta los números del 0 al 9 en los displays de la FPGA.  <br/>
 
-### 4. Integración <br/>
+### 4. Integración y funcionamiento del sistema <br/>
 El sistema tiene el siguiente funcionamiento: <br/>
 * El divisor de reloj genera una señal con la frecuencia adecuada (clkdiv). <br/>
 * El contador recibe el pulso de reloj dividido y opera en base a enable, up_down y load (counter_up_down). <br/>
