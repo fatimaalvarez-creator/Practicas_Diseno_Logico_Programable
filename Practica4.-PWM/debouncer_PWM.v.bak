@@ -1,0 +1,22 @@
+// Módulo para eliminar rebotes de botones
+module debouncer_PWM(
+    input pb_in,  // Entrada del botón
+    input clk,    // Reloj (slow_clk)
+    output reg pb_out // Salida limpia
+);
+
+    // Registros para detectar flancos
+    reg pb_prev = 1'b0;
+    
+    always @(posedge clk) begin
+        // Detectamos cambio en el estado del botón
+        if (pb_in != pb_prev) begin
+            pb_prev <= pb_in;   // Actualizamos el estado previo
+            pb_out <= pb_in;    // Actualizamos la salida
+        end
+        else begin
+            pb_out <= 1'b0;     // Sin cambio, no activamos la salida
+        end
+    end
+    
+endmodule
