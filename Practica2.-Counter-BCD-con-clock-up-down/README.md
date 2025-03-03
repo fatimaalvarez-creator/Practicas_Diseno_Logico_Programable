@@ -16,6 +16,12 @@ Diseñar e implementar un counter BCD con clock up-down en Verilog para la FPGA 
 <br/>
 
 ## *DESCRIPCIÓN DEL FUNCIONAMIENTO:* <br/>
+1. Utilizamos el reloj de la FPGA DE10-Lite (50 MHz), como señal base. <br/>
+2. Partimos del contador BCD desarrollado en la práctica anterior y añadimos las señales load (para carga de valores) y up_down (para controlar la dirección del conteo). <br/>
+3. En el display de 7 segmentos se muestra el número que se convirtió de binario a decimal. <br/>
+4. Intregamos todo en un mismo archivo para el correcto funcionamiento del sistema. <br/>
+
+## *DESARROLLO DE LA PRÁCTICA:* <br/>
 ### 1. Divisor de reloj:  <br/>
 El reloj de la FPGA DE10-Lite opera a 50 MHz, es muy rápido para una visualización clara del conteo. Para solucionar esto, implementamos un divisor de reloj (clkdiv), el cual reduce la frecuencia de la señal de reloj y genera una señal de menor frecuencia. Esta nueva señal es utilizada por el contador para asegurar que los cambios en el valor sean perceptibles en los displays de 7 segmentos.  <br/>
 
@@ -38,8 +44,6 @@ El sistema tiene el siguiente funcionamiento: <br/>
 * El contador recibe el pulso de reloj dividido y opera en base a enable, up_down y load (counter_up_down). <br/>
 * El valor BCD del contador se envía al decodificador BCD a 7 segmentos (decoder_bcd). <br/>
 * El valor convertido es mostrado en los displays de 7 segmentos de la FPGA (decoder_7seg). <br/>
-
-## *DESARROLLO DE LA PRÁCTICA:* <br/>
 RTL VIEWER: <br/>
 RTL VIEWER:
 
