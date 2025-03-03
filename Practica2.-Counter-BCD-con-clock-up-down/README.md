@@ -5,7 +5,7 @@ A01645815 <br/>
 <br/>
 
 ## *OBJETIVO:* <br/>
-Diseñar e implementar un contador ascendente-descendente en Verilog para la FPGA DE10-Lite, integrando un divisor de reloj que sirve para ajustar la velocidad de conteo y mejorar la visualización, señal 'enable' que habilita o deshabilita el conteo, señal 'load' que permite agregar un valor específico, un switch up/down que nos ayuda a configurar si el conteo es ascendente o descendente y por último los displays de 7 segmentos para mostar el valor actual de contador.  
+Diseñar e implementar un counter BCD con clock up-down en Verilog para la FPGA DE10-Lite, integrando un divisor de reloj que sirve para ajustar la velocidad de conteo y mejorar la visualización, señal 'enable' que habilita o deshabilita el conteo, señal 'load' que permite agregar un valor específico, un switch up/down que nos ayuda a configurar si el conteo es ascendente o descendente y por último los displays de 7 segmentos para mostar el valor actual de contador.  
 <br/>
 
 ## *MATERIALES NECESARIOS:* <br/>
