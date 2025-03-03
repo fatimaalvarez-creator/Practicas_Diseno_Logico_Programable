@@ -13,7 +13,6 @@ Diseñar e implementar un counter BCD con clock up-down en Verilog para la FPGA 
 * Cable USB Blaster para la programación. <br/>
 * Software Intel Quartus Prime Lite. <br/>
 * Código en Verilog y TestBench. <br/>
-<br/>
 
 ## *DESCRIPCIÓN DEL FUNCIONAMIENTO:* <br/>
 1. Utilizamos el reloj de la FPGA DE10-Lite (50 MHz), como señal base. <br/>
