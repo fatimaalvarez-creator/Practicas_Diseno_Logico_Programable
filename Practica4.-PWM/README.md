@@ -1,4 +1,4 @@
-# Práctica 4. PWM
+# Práctica 3. PWM
 Fátima Álvarez Nuño <br/>
 A01645815 <br/>
 /03/25 <br/>
