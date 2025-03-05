@@ -27,16 +27,16 @@ La señal PWM se genera mediante un contador que ajusta la salida en función de
 El duty cycle es ajustado por medio de los botones de la FPGA. Un botón incrementa el ciclo de trabajo, y el otro lo decrementa, ajustando la posición del servomotor en pequeños pasos. <br/>
 
 ### 3. Control mediante botones: <br/>
-Los botones de la tarjeta controlan el incremento o decremento del duty cycle, el cual determina la posición exacta del servomotor. Los cambios son graduales y se manejan con un reloj dividido para asegurar una velocidad adecuada. <br/>
+Los botones de la tarjeta controlan el incremento o decremento del duty cycle, el cual determina la posición exacta del servomotor. Los cambios son graduales y se manejan con un 'clkdiv' para asegurar una velocidad adecuada. <br/>
 
-### 4. Divisor de reloj (clk_div): <br/>
-El divisor de reloj es un módulo fundamental para la correcta operación de la señal PWM. Dado que el reloj principal de la FPGA DE10-Lite es de 50 MHz, se necesita reducir esta frecuencia para generar una señal PWM adecuada para controlar el servomotor a 50 Hz. <br/>
+### 4. Divisor de reloj (clkdiv_PWM): <br/>
+El divisor de reloj ayuda a la correcta operación de la señal PWM. Ya que el reloj principal de la FPGA DE10-Lite es de 50 MHz, se necesita reducir esta frecuencia para generar una señal PWM adecuada para controlar el servomotor a 50 Hz. <br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/ba6fb8ac-910a-4b90-90cd-c9f9527ccf19)
 <br/>
 
-### 5. Eliminación de rebotes (debouncer): <br/>
-Cuando se utilizan botones físicos para controlar el ciclo de trabajo del PWM, es común que el botón genere rebotes eléctricos, lo que puede hacer que el sistema registre múltiples pulsos por un solo clic. Para evitar este problema, implementamos un módulo de debouncer, que limpia la señal de los botones, asegurando que cada pulsación sea procesada solo una vez. <br/> El módulo debouncer_PWM detecta flancos de subida o bajada en la entrada del botón, asegurándose de que solo un pulso limpio se registre por cada pulsación real del botón. <br/>
+### 5. Eliminación de rebotes (debouncer_PWM): <br/>
+Cuando se utilizan botones físicos para controlar el ciclo de trabajo del PWM, los botones generan rebotes, lo que puede hacer que el sistema registre varios pulsos por un solo clic. Para evitar este problema, implementamos un 'debouncer', que limpia la señal de los botones, asegurando que cada pulsación sea procesada solo una vez. <br/> El 'debouncer_PWM' detecta flancos de subida o bajada en la entrada del botón, asegurándose de que solo un pulso limpio se registre por cada pulsación del botón. <br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/010d8949-7761-46f6-a614-433307906b71)
 <br/>
