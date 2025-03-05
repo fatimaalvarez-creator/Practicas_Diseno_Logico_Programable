@@ -5,6 +5,7 @@ A01645815 <br/>
 <br/>
 
 ## OBJETIVO: <br/>
+Crear un módulo en Verilog que genere una señal PWM para ajustar la posición de un servomotor en la FPGA DE10-Lit, la señal PWM tiene una frecuencia de 50 Hz (período de 20 ms), adecuada para controlar la posición de un servomotor en la FPGA DE10-Lite. El duty cycle (ancho de pulso) determinará la posición del servomotor, y se ajustará utilizando los botones de la FPGA para aumentar o disminuir el duty cycle en pequeños incrementos.
 Crear un módulo en Verilog que genere una señal PWM para ajustar la posición de un servomotor en la FPGA DE10-Lite, permitiendo la modificación del ciclo de trabajo (duty cycle) a través de los botones de la tarjeta, ya sea incrementando o decrementando el ángulo de movimiento del servo.
 
 ## MATERIALES NECESARIOS: <br/>
