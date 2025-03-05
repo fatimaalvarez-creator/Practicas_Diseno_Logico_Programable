@@ -1,3 +1,6 @@
+// tiempo
+`timescale 1ns / 100ps
+
 // testbench PWM
 module PWM_tb();
 
