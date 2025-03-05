@@ -29,7 +29,7 @@ El duty cycle es ajustado por medio de los botones de la FPGA. Un botón increme
 ### 3. Control mediante botones: <br/>
 Los botones de la tarjeta controlan el incremento o decremento del duty cycle, el cual determina la posición exacta del servomotor. Los cambios son graduales y se manejan con un reloj dividido para asegurar una velocidad adecuada. <br/>
 
-4. Divisor de reloj (clk_div): <br/>
+### 4. Divisor de reloj (clk_div): <br/>
 El divisor de reloj es un módulo fundamental para la correcta operación de la señal PWM. Dado que el reloj principal de la FPGA DE10-Lite es de 50 MHz, se necesita reducir esta frecuencia para generar una señal PWM adecuada para controlar el servomotor a 50 Hz. <br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/ba6fb8ac-910a-4b90-90cd-c9f9527ccf19)
