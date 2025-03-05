@@ -31,12 +31,14 @@ Los botones de la tarjeta controlan el incremento o decremento del duty cycle, e
 
 ### 4. Divisor de reloj (clkdiv_PWM): <br/>
 El divisor de reloj ayuda a la correcta operación de la señal PWM. Ya que el reloj principal de la FPGA DE10-Lite es de 50 MHz, se necesita reducir esta frecuencia para generar una señal PWM adecuada para controlar el servomotor a 50 Hz. <br/>
+<br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/ba6fb8ac-910a-4b90-90cd-c9f9527ccf19)
 <br/>
 
 ### 5. Eliminación de rebotes (debouncer_PWM): <br/>
 Cuando se utilizan botones físicos para controlar el ciclo de trabajo del PWM, los botones generan rebotes, lo que puede hacer que el sistema registre varios pulsos por un solo clic. Para evitar este problema, implementamos un 'debouncer', que limpia la señal de los botones, asegurando que cada pulsación sea procesada solo una vez. <br/> El 'debouncer_PWM' detecta flancos de subida o bajada en la entrada del botón, asegurándose de que solo un pulso limpio se registre por cada pulsación del botón. <br/>
+<br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/010d8949-7761-46f6-a614-433307906b71)
 <br/>
