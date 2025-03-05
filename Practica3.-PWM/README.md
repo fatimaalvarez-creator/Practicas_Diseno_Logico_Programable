@@ -55,6 +55,7 @@ RTL VIEWER: <br/>
 <br/>
 
 ### 7. Mostramos la wave del testbench: <br/>
+![image](https://github.com/user-attachments/assets/08e5db8f-cc9e-455d-8328-699e6981bde0)
 <br/>
 
 
