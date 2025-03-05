@@ -5,6 +5,7 @@ A01645815 <br/>
 <br/>
 
 ## OBJETIVO: <br/>
+Crear un módulo en Verilog que genere una señal PWM para ajustar la posición de un servomotor en la FPGA DE10-Lite, permitiendo la modificación del ciclo de trabajo (duty cycle) a través de los botones de la tarjeta, ya sea incrementando o decrementando el ángulo de movimiento del servo.
 
 ## MATERIALES NECESARIOS: <br/>
 * Tarjeta FPGA DE10-Lite (10M50DAF484C7G). <br/>
