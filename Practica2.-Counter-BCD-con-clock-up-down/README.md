@@ -55,7 +55,7 @@ El sistema tiene el siguiente funcionamiento: <br/>
 * El valor convertido es mostrado en los displays de 7 segmentos de la FPGA (decoder_7seg). <br/>
 
 ### 5. Mostramos la wave del testbench: <br/>
-
+![image](https://github.com/user-attachments/assets/a5629b0f-0eee-42f7-84f3-d5f1ff708f61)
 <br/>
 
 ## *CONCLUSIÓN:* <br/>
