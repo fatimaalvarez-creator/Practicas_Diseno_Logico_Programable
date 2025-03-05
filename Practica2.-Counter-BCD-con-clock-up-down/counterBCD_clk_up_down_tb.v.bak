@@ -1,0 +1,64 @@
+`timescale 1ns / 1ps
+
+module tb_counterBCD_clk_up_down;
+
+    // Parámetros
+    parameter N = 10;
+    parameter SEGMENTOS = 7;
+    
+    // Entradas
+    reg clk;
+    reg rst;
+    reg enable;
+    reg switch;
+    reg load;
+    reg [5:0] load_switch;
+    
+    // Salidas
+    wire [0:6] D_unidades;
+    wire [0:6] D_decenas;
+    wire [0:6] D_centenas;
+    wire [0:6] D_miles;
+    
+    // Instancia del módulo bajo prueba (UUT)
+    counterBCD_clk_up_down #(N, SEGMENTOS) uut (
+        .clk(clk),
+        .rst(rst),
+        .enable(enable),
+        .switch(switch),
+        .load(load),
+        .load_switch(load_switch),
+        .D_unidades(D_unidades),
+        .D_decenas(D_decenas),
+        .D_centenas(D_centenas),
+        .D_miles(D_miles)
+    );
+    
+    // Generación del clock
+    always #5 clk = ~clk; // Período de 10 ns
+    
+    // Estímulos de prueba
+    initial begin
+        // Inicialización de señales
+        clk = 0;
+        rst = 1;
+        enable = 0;
+        switch = 0;
+        load = 0;
+        load_switch = 6'd0;
+        
+        #10 rst = 0; // Desactivar reset
+        
+        #10 enable = 1; // Activar el contador
+        switch = 1; // Contador en modo ascendente
+        
+        #100 switch = 0; // Cambiar a modo descendente
+        
+        #50 load = 1; // Cargar un valor específico
+        load_switch = 6'd25;
+        #10 load = 0;
+        
+        #100 $stop; // Finalizar la simulación
+    end
+    
+endmodule
