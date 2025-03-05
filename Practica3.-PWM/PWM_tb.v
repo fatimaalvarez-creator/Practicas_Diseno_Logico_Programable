@@ -1,43 +1,53 @@
-// test bench opcional para simulación
+// testbench PWM
 module PWM_tb();
-    reg clk = 0;
-    reg rst = 0;
-    reg pb_inc = 1;  // botones inactivos
-    reg pb_dec = 1;
-    wire pwm_out;
-    
-// instancia del módulo PWM
-PWM DUT(
-  .clk(clk),
-  .rst(rst),
+
+reg pb_inc; // botón incrementar duty cycle
+reg pb_dec; // botón decrementar duty cycle
+reg clk;  // reloj (50MHz)
+reg rst;  // reset
+wire pwm_out; // salida de PWM
+
+// instanciamos el módulo PWM
+PWM PWM_INSTANCIA (
   .pb_inc(pb_inc),
   .pb_dec(pb_dec),
+  .clk(clk),
+  .rst(rst),
   .pwm_out(pwm_out)
 );
 
-// generador de reloj de 50MHz (periodo de 20ns)
-always #10 clk = ~clk;
 
-// secuencia de prueba
+// generación de señales de reloj
+always@(*)
+	begin
+	  clk = 0; // reloj no activo
+	  #10;
+	  clk = 1;  // reloj activo de 50 MHz
+	end
+
+// pruebas
 initial 
 	begin
-	  // reset 
-	  rst = 1;
+	  // inicialización
+	  rst = 1;   // reseteamos
+	  pb_inc = 0;     // no presionamos el botón de incrementar al inicio
+	  pb_dec = 0;     // no presionamos el botón de decrementar al inicio
+	  #20 rst = 0;    // soltar reset
+
+	  // prueba de incremento de duty cycle
+	  #20 pb_inc = 1;  // presionar el botón incrementar
+	  #40 pb_inc = 0;  // soltar el botón
+	  #40 pb_inc = 1;  // presionar de nuevo el botón incrementar
+	  #40 pb_inc = 0;  // soltar el botón
+
+	  // prueba de decremento de duty cycle
+	  #20 pb_dec = 1;  // presionar el botón decrementar
+	  #40 pb_dec = 0;  // soltar el botón
+	  #40 pb_dec = 1;  // presionar de nuevo el botón decrementar
+	  #40 pb_dec = 0;  // soltar el botón
+	  
 	  #100;
-	  rst = 0;
-	  #1000;
-  
-	  // incrementar posición
-	  pb_inc = 0; // presionar botón (activo bajo)
-	  #200;
-	  pb_inc = 1; // soltar botón
-	  #1000;
-  
-	  // decrementar posición
-	  pb_dec = 0; // presionar botón
-	  #200;
-	  pb_dec = 1; // soltar botón
-	  #1000;
-	end
+	  
+  end
 
 endmodule

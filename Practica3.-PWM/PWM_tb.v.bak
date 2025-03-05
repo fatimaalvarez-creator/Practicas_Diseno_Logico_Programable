@@ -1,0 +1,45 @@
+// Test bench opcional para simulación
+module PWM_tb();
+    reg clk = 0;
+    reg rst = 0;
+    reg pb_inc = 1;  // Botones no presionados (pull-up)
+    reg pb_dec = 1;
+    wire pwm_out;
+    
+    // Instancia del módulo PWM
+    pwm DUT(
+        .clk(clk),
+        .rst(rst),
+        .pb_inc(pb_inc),
+        .pb_dec(pb_dec),
+        .pwm_out(pwm_out)
+    );
+    
+    // Generador de reloj de 50MHz (periodo de 20ns)
+    always #10 clk = ~clk;
+    
+    // Secuencia de prueba
+    initial begin
+        // Reset inicial
+        rst = 1;
+        #100;
+        rst = 0;
+        #1000;
+        
+        // Incrementar posición
+        pb_inc = 0; // Presionar botón (activo bajo)
+        #200;
+        pb_inc = 1; // Soltar botón
+        #1000;
+        
+        // Decrementar posición
+        pb_dec = 0; // Presionar botón
+        #200;
+        pb_dec = 1; // Soltar botón
+        #1000;
+        
+        // Finalizar simulación
+        $finish;
+    end
+    
+endmodule
