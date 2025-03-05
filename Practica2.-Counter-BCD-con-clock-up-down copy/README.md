@@ -37,7 +37,6 @@ El contador es un BCD (Binary-Coded Decimal) y permite contar en ambas direccion
 <br/> - Si está en bajo (0), el contador opera en modo descendente. <br/>
 <br/> - Si está en alto (1), el contador opera en modo ascendente. <br/>
 * Señal 'load': Permite cargar un valor específico en el contador, es útil par iniciar el conteo desde un número determinado en lugar de comenzar desde cero. <br/>
-<br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/5c70b467-cb37-45e3-be30-e78adcd9a441)
 <br/>
