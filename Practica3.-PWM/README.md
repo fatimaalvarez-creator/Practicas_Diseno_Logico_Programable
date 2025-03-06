@@ -49,7 +49,6 @@ El sistema completo incluye: <br/>
 * El módulo de generación de PWM, que ajusta el ciclo de trabajo con base en la señal de reloj dividida y el ajuste de los botones. <br/>
 *El módulo de debouncing, que asegura que las pulsaciones de los botones sean procesadas correctamente, eliminando cualquier rebote que pueda ocurrir. <br/>
 * Todo el sistema funciona en conjunto, permitiendo el control preciso de la posición del servomotor a través del ajuste gradual del duty cycle. <br/>
-<br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/264d50d7-06df-413f-9cec-284e45f5ab1e)
 <br/>
