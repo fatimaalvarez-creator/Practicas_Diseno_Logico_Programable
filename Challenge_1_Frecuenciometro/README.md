@@ -5,7 +5,7 @@ A01645815 <br/>
 <br/>
 
 ## *OBJETIVO:* <br/>
-Implementar en Verilog un frecuencímetro que mida la frecuencia de una señal de entrada en un rango de 10 Hz a 100 kHz, mostrando el resultado en los displays de 7 segmentos de la FPGA DE10-Lite, con un error de precisión del 1%. <br/>
+Implementar en Verilog un frecuencímetro que mida la frecuencia de una señal de entrada en un rango de 10 Hz a 100 kHz, mostrando el resultado en los displays de 7 segmentos de la FPGA DE10-Lite, con un error de precisión del 1%.  <br/>
 
 ## *MATERIALES NECESARIOS:* <br/>
 * Tarjeta FPGA DE10-Lite (10M50DAF484C7G). <br/>
@@ -35,8 +35,8 @@ RTL VIEWER: <br/>
 ### 3. Conversión a BCD y Visualización en Displays de 7 Segmentos <br/>
 El valor del contador (frecuencia medida) se convierte de binario a BCD para ser mostrado en los displays de 7 segmentos de la FPGA. Se implementa un decodificador BCD a 7 segmentos que traduce el valor numérico a la representación visual correcta. <br/>
 Señales importantes: <br/>
-* freq_bin: Frecuencia medida en binario. <br/>
-* freq_bcd: Frecuencia convertida a BCD. <br/>
+* frequency: Frecuencia medida en binario. <br/>
+* BCD_in_sw: Frecuencia convertida a BCD. <br/>
 * seg7_display: Salida para los displays de la FPGA. <br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/ec78266d-7ca5-4cfc-aa81-bd419491852b)
@@ -48,6 +48,9 @@ El sistema opera de la siguiente manera: <br/>
 * El contador mide la cantidad de pulsos de la señal de entrada en ese intervalo. <br/>
 * La frecuencia medida se almacena y se convierte a BCD. <br/>
 * El decodificador BCD a 7 segmentos muestra el valor en los displays de la FPGA. <br/>
+RTL VIEWER: <br/>
+![image](https://github.com/user-attachments/assets/80bdf1fa-f3c2-4f1e-9fdd-d6847814e14c)
+<br/>
 
 ### 5. Mostramos la wave del TestBench: <br/>
 
