@@ -1,4 +1,4 @@
-# Challenge 1. Frecuenciometro
+# Challenge 1. Frecuencímetro
 Fátima Álvarez Nuño <br/>
 A01645815 <br/>
 07/03/25 <br/>
