@@ -22,6 +22,7 @@ Implementar en Verilog un frecuencímetro que mida la frecuencia de una señal d
 ## *DESARROLLO DE LA PRÁCTICA:* <br/>
 ### 1. Divisor de Reloj para la Base de Tiempo <br/>
 Para garantizar precisión en la medición, se utiliza un divisor de reloj que genera una base de tiempo de 1 segundo. Durante este período, se cuenta el número de pulsos de la señal de entrada para calcular la frecuencia. <br/>
+<br/>
 RTL VIEWER: <br/>
 
 ### 2. Contador de Ciclos de la Señal de Entrada <br/>
@@ -30,6 +31,7 @@ Señales importantes: <br/>
 * clk: Reloj de la FPGA. <br/>
 * signal_in: Señal cuya frecuencia se va a medir. <br/>
 * counter: Contador de ciclos de la señal. <br/>
+<br/>
 RTL VIEWER: <br/>
 
 ### 3. Conversión a BCD y Visualización en Displays de 7 Segmentos <br/>
@@ -38,6 +40,7 @@ Señales importantes: <br/>
 * freq_bin: Frecuencia medida en binario. <br/>
 * freq_bcd: Frecuencia convertida a BCD. <br/>
 * seg7_display: Salida para los displays de la FPGA. <br/>
+<br/>
 RTL VIEWER: <br/>
 
 ### 4. Integración y Funcionamiento del Sistema <br/>
