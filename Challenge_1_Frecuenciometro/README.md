@@ -27,7 +27,7 @@ RTL VIEWER: <br/>
 ### 2. Contador de Ciclos de la Señal de Entrada <br/>
 Se implementa un contador que registra la cantidad de pulsos de la señal a medir dentro del intervalo de 1 segundo generado por el divisor de reloj. Al final del intervalo, el valor del contador representa directamente la frecuencia de la señal de entrada en Hz. <br/>
 Señales importantes: <br/>
-* clk_50MHz: Reloj de la FPGA. <br/>
+* clk: Reloj de la FPGA. <br/>
 * signal_in: Señal cuya frecuencia se va a medir. <br/>
 * counter: Contador de ciclos de la señal. <br/>
 RTL VIEWER: <br/>
