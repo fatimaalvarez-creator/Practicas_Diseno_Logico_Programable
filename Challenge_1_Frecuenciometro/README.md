@@ -47,12 +47,12 @@ RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/ec78266d-7ca5-4cfc-aa81-bd419491852b)
  <br/>
 
-### 4. Integración y Funcionamiento del Sistema <br/>
-El sistema opera de la siguiente manera: <br/>
-* El divisor de reloj genera la base de tiempo de 1 segundo. <br/>
-* El contador mide la cantidad de pulsos de la señal de entrada en ese intervalo. <br/>
-* La frecuencia medida se almacena y se convierte a BCD. <br/>
-* El decodificador BCD a 7 segmentos muestra el valor en los displays de la FPGA. <br/>
+### 4. Integración del sistema <br/>
+* El sistema opera de la siguiente manera: <br/>
+* El contador mide la cantidad de ciclos en el intervalo de tiempo definido. <br/>
+* Se calcula la frecuencia dividiendo la cantidad de ciclos entre el tiempo de medición. <br/>
+* La frecuencia calculada se convierte a BCD. <br/>
+* La información se envía a los displays para su visualización. <br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/80bdf1fa-f3c2-4f1e-9fdd-d6847814e14c)
 <br/>
