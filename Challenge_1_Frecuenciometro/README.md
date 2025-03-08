@@ -28,8 +28,11 @@ Señales importantes:
 - signal_in: Señal cuya frecuencia se va a medir.
 - enable: Habilitador del contador.
 - count_out: Valor del contador que almacena los pulsos medidos.<br/>
+RTL VIEWER: <br/>
+![image](https://github.com/user-attachments/assets/167872d8-bb3c-478b-bd10-1dd0cfaf50e7)
+ <br/>
 
-###  Cálculo de frecuencia <br/>
+###  2. Cálculo de frecuencia <br/>
 El módulo de frecuencímetro procesa la cantidad de ciclos medidos y calcula la frecuencia según la ecuación: f=N/T. <br/>
 * Donde: <br/>
 - N es el número de ciclos contados. <br/>
@@ -37,14 +40,17 @@ El módulo de frecuencímetro procesa la cantidad de ciclos medidos y calcula la
 Señales importantes: <br/>
 - freq_calculated: Frecuencia calculada.
 - count_in: Valor del contador.
+RTL VIEWER: <br/>
+![image](https://github.com/user-attachments/assets/330171ce-d5b0-47fe-b84a-585671dfca0c)
+ <br/>
 
 ### 3. Conversión a BCD y Visualización en Displays de 7 Segmentos <br/>
 El valor del contador (frecuencia medida) se convierte de binario a BCD para ser mostrado en los displays de 7 segmentos de la FPGA. Se implementa un decodificador BCD a 7 segmentos que traduce el valor numérico a la representación visual correcta. <br/>
 Señales importantes: <br/>
-* freq_bcd: Frecuencia medida en BCD.
-* seg7_display: Salida para los displays de la FPGA. <br/>
+* BCD_in: Frecuencia medida en BCD.
+* D_unidades, D_decenas, D_centenas, D_miles, D_decenas_miles, D_centenas_miles: Salida para los displays de la FPGA. <br/>
 RTL VIEWER: <br/>
-![image](https://github.com/user-attachments/assets/ec78266d-7ca5-4cfc-aa81-bd419491852b)
+![image](https://github.com/user-attachments/assets/70d7c77b-a429-4b62-9e2f-72c4d0affe22)
  <br/>
 
 ### 4. Integración del sistema <br/>
@@ -54,10 +60,13 @@ RTL VIEWER: <br/>
 * La frecuencia calculada se convierte a BCD. <br/>
 * La información se envía a los displays para su visualización. <br/>
 RTL VIEWER: <br/>
-![image](https://github.com/user-attachments/assets/80bdf1fa-f3c2-4f1e-9fdd-d6847814e14c)
+![image](https://github.com/user-attachments/assets/4c916b62-03d4-482b-a4a7-aec1caa08be9)
 <br/>
 
 ### 5. Mostramos la wave del TestBench: <br/>
+![image](https://github.com/user-attachments/assets/9a8ac560-17da-4147-a36b-b1593b275bea)
+![image](https://github.com/user-attachments/assets/ec94584e-1cfb-453a-94a4-5260c01fe2d0)
+ <br/>
 
 ## *CONCLUSIÓN:* <br/>
 En esta práctica, se diseñó e implementó un frecuencímetro digital en Verilog para la FPGA DE10-Lite, capaz de medir señales en un rango de 10 Hz a 100 kHz con un error de precisión del 1%. Se integraron módulos de divisor de reloj, contador de ciclos, conversión a BCD y visualización en 7 segmentos. Las pruebas y simulaciones confirmaron su correcto funcionamiento.
