@@ -54,7 +54,7 @@ RTL VIEWER: <br/>
  <br/>
 
 ### 4. Integración del sistema <br/>
-* El sistema opera de la siguiente manera: <br/>
+El sistema opera de la siguiente manera: <br/>
 * El contador mide la cantidad de ciclos en el intervalo de tiempo definido. <br/>
 * Se calcula la frecuencia dividiendo la cantidad de ciclos entre el tiempo de medición. <br/>
 * La frecuencia calculada se convierte a BCD. <br/>
