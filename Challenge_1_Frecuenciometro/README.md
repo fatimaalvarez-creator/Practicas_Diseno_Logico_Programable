@@ -5,7 +5,7 @@ A01645815 <br/>
 <br/>
 
 ## *OBJETIVO:* <br/>
-Implementar en Verilog un frecuencímetro que mida la frecuencia de una señal de entrada en un rango de 10 Hz a 100 kHz, mostrando el resultado en los displays de 7 segmentos de la FPGA DE10-Lite, con un error de precisión del 1%.  <br/>
+Implementar en Verilog un frecuencímetro que mida la frecuencia de una señal de entrada en un rango de 10 Hz a 100 kHz, mostrando el resultado en los displays de 7 segmentos de la FPGA DE10-Lite, con un error de precisión del 1%. <br/>
 
 ## *MATERIALES NECESARIOS:* <br/>
 * Tarjeta FPGA DE10-Lite (10M50DAF484C7G). <br/>
@@ -19,6 +19,9 @@ Implementar en Verilog un frecuencímetro que mida la frecuencia de una señal d
 3. Se calcula la frecuencia dividiendo el número de ciclos entre el intervalo de medición. <br/>
 4. Se convierte el valor medido a BCD para su visualización en los displays de 7 segmentos. <br/>
 
+
+
+#########
 ## *DESARROLLO DE LA PRÁCTICA:* <br/>
 ### 1. Divisor de Reloj para la Base de Tiempo <br/>
 Para garantizar precisión en la medición, se utiliza un divisor de reloj que genera una base de tiempo de 1 segundo. Durante este período, se cuenta el número de pulsos de la señal de entrada para calcular la frecuencia. <br/>
