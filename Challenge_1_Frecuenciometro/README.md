@@ -69,4 +69,4 @@ RTL VIEWER: <br/>
  <br/>
 
 ## *CONCLUSIÓN:* <br/>
-En esta práctica, se diseñó e implementó un frecuencímetro digital en Verilog para la FPGA DE10-Lite, capaz de medir señales en un rango de 10 Hz a 100 kHz con un error de precisión del 1%. Se integraron módulos de divisor de reloj, contador de ciclos, conversión a BCD y visualización en 7 segmentos. Las pruebas y simulaciones confirmaron su correcto funcionamiento.
+En esta práctica, implementamos un frecuencímetro digital en Verilog para la FPGA DE10-Lite, capaz de medir señales en un rango de 10 Hz a 100 kHz con un error de precisión del 1%. Se integraron módulos de contador de ciclos de señal entrada, cálculos para la frecuenica, conversión a BCD y visualización en 7 segmentos.
