@@ -39,8 +39,8 @@ Donde: <br/>
 - T es el intervalo de medición. <br/>
  <br/>
 Señales importantes: <br/>
-- freq_calculated: Frecuencia calculada.
-- count_in: Valor del contador.
+- freq_calculated: Frecuencia calculada.  <br/>
+- count_in: Valor del contador.  <br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/330171ce-d5b0-47fe-b84a-585671dfca0c)
  <br/>
