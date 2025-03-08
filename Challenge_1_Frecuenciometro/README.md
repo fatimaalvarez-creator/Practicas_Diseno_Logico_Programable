@@ -37,7 +37,6 @@ El módulo de frecuencímetro procesa la cantidad de ciclos medidos y calcula la
 Donde: <br/>
 - N es el número de ciclos contados. <br/>
 - T es el intervalo de medición. <br/>
- <br/>
 Señales importantes: <br/>
 - freq_calculated: Frecuencia calculada.  <br/>
 - count_in: Valor del contador.  <br/>
