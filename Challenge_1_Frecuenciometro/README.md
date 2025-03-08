@@ -19,19 +19,24 @@ Implementar en Verilog un frecuencímetro que mida la frecuencia de una señal d
 3. Se calcula la frecuencia dividiendo el número de ciclos entre el intervalo de medición. <br/>
 4. Se convierte el valor medido a BCD para su visualización en los displays de 7 segmentos. <br/>
 
-
-
-#########
 ## *DESARROLLO DE LA PRÁCTICA:* <br/>
-### 1. Divisor de Reloj para la Base de Tiempo <br/>
-Para garantizar precisión en la medición, se utiliza un divisor de reloj que genera una base de tiempo de 1 segundo. Durante este período, se cuenta el número de pulsos de la señal de entrada para calcular la frecuencia. <br/>
+### 1. Contador de ciclos de la señal de entrada
+Se implementa un contador que registra la cantidad de pulsos de la señal a medir dentro del intervalo de tiempo generado por el reloj de referencia.
+Señales importantes:
+- clk: Reloj de la FPGA.
+- rst: Señal de reinicio.
+- signal_in: Señal cuya frecuencia se va a medir.
+- enable: Habilitador del contador.
+- count_out: Valor del contador que almacena los pulsos medidos.<br/>
 
-### 2. Contador de Ciclos de la Señal de Entrada <br/>
-Se implementa un contador que registra la cantidad de pulsos de la señal a medir dentro del intervalo de 1 segundo generado por el divisor de reloj. Al final del intervalo, el valor del contador representa directamente la frecuencia de la señal de entrada en Hz. <br/>
+###  Cálculo de frecuencia <br/>
+El módulo de frecuencímetro procesa la cantidad de ciclos medidos y calcula la frecuencia según la ecuación: f=N/T. <br/>
+* Donde: <br/>
+- N es el número de ciclos contados. <br/>
+- T es el intervalo de medición. <br/>
 Señales importantes: <br/>
-* clk: Reloj de la FPGA. <br/>
-* signal_in: Señal cuya frecuencia se va a medir. <br/>
-* counter: Contador de ciclos de la señal. <br/>
+- freq_calculated: Frecuencia calculada.
+- count_in: Valor del contador.
 
 ### 3. Conversión a BCD y Visualización en Displays de 7 Segmentos <br/>
 El valor del contador (frecuencia medida) se convierte de binario a BCD para ser mostrado en los displays de 7 segmentos de la FPGA. Se implementa un decodificador BCD a 7 segmentos que traduce el valor numérico a la representación visual correcta. <br/>
