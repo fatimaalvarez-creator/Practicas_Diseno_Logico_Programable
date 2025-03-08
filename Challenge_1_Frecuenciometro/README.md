@@ -34,7 +34,7 @@ RTL VIEWER: <br/>
 
 ###  2. Cálculo de frecuencia <br/>
 El módulo de frecuencímetro procesa la cantidad de ciclos medidos y calcula la frecuencia según la ecuación: f=N/T. <br/>
-* Donde: <br/>
+Donde: <br/>
 - N es el número de ciclos contados. <br/>
 - T es el intervalo de medición. <br/>
 Señales importantes: <br/>
