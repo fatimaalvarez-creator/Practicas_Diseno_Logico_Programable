@@ -16,7 +16,7 @@ always @(*) begin
         4'b0111: decoder_out = 7'b1111000; // 7
         4'b1000: decoder_out = 7'b0000000; // 8
         4'b1001: decoder_out = 7'b0010000; // 9
-        default: decoder_out = 7'b1111111; // Apagado
+        default: decoder_out = 7'b1111111; 
     endcase
 end
 
