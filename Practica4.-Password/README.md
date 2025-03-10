@@ -34,16 +34,14 @@ RTL VIEWER's: <br/>
 * Una vez ingresados los 4 valores, el sistema comparará la secuencia ingresada con una clave predefinida almacenada en el código. <br/>
 - Si la secuencia ingresada es idéntica a la clave almacenada, se mostrará el mensaje "DONE" en los displays de 7 segmentos. <br/>
 - Si en cualquier punto hay un error en la secuencia ingresada, el sistema inmediatamente mostrará "ERROR" en los displays. <br/>
-State  Machine: <br/>
-![image](https://github.com/user-attachments/assets/38197c54-4d67-467f-a953-62a5271bc2f1)
-<br/>
+
 
 ### 3. Reinicio del sistema:
 * Si el usuario desea intentar nuevamente, podrá reiniciar el sistema utilizando un botón de reset. <br/>
 * Esto limpiará la memoria de la contraseña ingresada y permitirá un nuevo intento. <br/>
 * Este sistema se implementará en Verilog y se ejecutará en la FPGA DE10-Lite, asegurando una operación secuencial y basada en una Máquina de Estados Finitos (FSM) para gestionar los estados de ingreso, validación y visualización de resultados. <br/>
-RTL VIEWER: <br/>
-
+State  Machine: <br/>
+![image](https://github.com/user-attachments/assets/38197c54-4d67-467f-a953-62a5271bc2f1)
 <br/>
 
 ### 4. Mostramos la wave del testbench: <br/>
