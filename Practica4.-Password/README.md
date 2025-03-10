@@ -23,7 +23,7 @@ El sistema de contraseña en la FPGA DE10-Lite operará mediante una Máquina de
 ### 1. Ingreso de la contraseña: <br/>
 * La clave se ingresará un bit a la vez usando los switches (SW) de la FPGA. <br/>
 * El sistema esperará la siguiente entrada hasta completar la secuencia de 4 valores. <br/>
-* Para esto instanciamos el módulo de one_shot para cada switch * <br/>
+#### Para esto instanciamos el módulo de one_shot para cada switch. <br/>
 RTL VIEWER: <br/>
 ![image](https://github.com/user-attachments/assets/1cba3c43-19ca-448f-92cd-4b655508010e)
 <br/>
