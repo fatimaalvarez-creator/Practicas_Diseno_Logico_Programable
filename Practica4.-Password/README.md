@@ -34,8 +34,8 @@ RTL VIEWER's: <br/>
 * Una vez ingresados los 4 valores, el sistema comparará la secuencia ingresada con una clave predefinida almacenada en el código. <br/>
 - Si la secuencia ingresada es idéntica a la clave almacenada, se mostrará el mensaje "DONE" en los displays de 7 segmentos. <br/>
 - Si en cualquier punto hay un error en la secuencia ingresada, el sistema inmediatamente mostrará "ERROR" en los displays. <br/>
-RTL VIEWER: <br/>
-
+State  Machine: <br/>
+![image](https://github.com/user-attachments/assets/38197c54-4d67-467f-a953-62a5271bc2f1)
 <br/>
 
 ### 3. Reinicio del sistema:
