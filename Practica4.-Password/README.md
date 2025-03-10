@@ -40,7 +40,8 @@ RTL VIEWER's: <br/>
 * Si el usuario desea intentar nuevamente, podrá reiniciar el sistema utilizando un botón de reset. <br/>
 * Esto limpiará la memoria de la contraseña ingresada y permitirá un nuevo intento. <br/>
 * Este sistema se implementará en Verilog y se ejecutará en la FPGA DE10-Lite, asegurando una operación secuencial y basada en una Máquina de Estados Finitos (FSM) para gestionar los estados de ingreso, validación y visualización de resultados. <br/>
-State  Machine: <br/>
+<br/>
+#### State  Machine: <br/>
 ![image](https://github.com/user-attachments/assets/38197c54-4d67-467f-a953-62a5271bc2f1)
 <br/>
 
