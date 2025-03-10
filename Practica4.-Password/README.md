@@ -15,28 +15,34 @@ El objetivo es crear en Verilog un sistema de contraseña en la FPGA DE10-Lite u
 
 ## *DESCRIPCIÓN DEL FUNCIONAMIENTO:* <br/>
 1. Se debe ingresar una contraseña utilizando los switches de la FPGA. <br/>
-2. El sistema validará la secuencia ingresada; si es correcta, desplegará "Good", de lo contrario, "Bad". <br/>
+2. El sistema validará la secuencia ingresada; si es correcta, desplegará "DONE", de lo contrario, "ERROR". <br/>
 3. Se incluye un reset para permitir nuevos intentos. <br/>
 
 ## *DESARROLLO DE LA PRÁCTICA:* <br/>
 El sistema de contraseña en la FPGA DE10-Lite operará mediante una Máquina de Estados Finitos (FSM), siguiendo los siguientes pasos: <br/>
 ### 1. Ingreso de la contraseña: <br/>
 * La clave se ingresará un bit a la vez usando los switches (SW) de la FPGA. <br/>
-* Para capturar cada entrada, el usuario deberá presionar un botón (KEY), lo que indicará al sistema que almacene el valor actual del switch. <br/>
 * El sistema esperará la siguiente entrada hasta completar la secuencia de 4 valores. <br/>
+* Para esto instanciamos el módulo de one_shot para cada switch * <br/>
 RTL VIEWER: <br/>
+![image](https://github.com/user-attachments/assets/1cba3c43-19ca-448f-92cd-4b655508010e)
+<br/>
 
 ### 2. Validación de la contraseña:
 * Una vez ingresados los 4 valores, el sistema comparará la secuencia ingresada con una clave predefinida almacenada en el código. <br/>
-- Si la secuencia ingresada es idéntica a la clave almacenada, se mostrará el mensaje "Good" en los displays de 7 segmentos. <br/>
-- Si en cualquier punto hay un error en la secuencia ingresada, el sistema inmediatamente mostrará "Bad" en los displays. <br/>
+- Si la secuencia ingresada es idéntica a la clave almacenada, se mostrará el mensaje "DONE" en los displays de 7 segmentos. <br/>
+- Si en cualquier punto hay un error en la secuencia ingresada, el sistema inmediatamente mostrará "ERROR" en los displays. <br/>
 RTL VIEWER: <br/>
+
+<br/>
 
 ### 3. Reinicio del sistema:
 * Si el usuario desea intentar nuevamente, podrá reiniciar el sistema utilizando un botón de reset. <br/>
 * Esto limpiará la memoria de la contraseña ingresada y permitirá un nuevo intento. <br/>
 * Este sistema se implementará en Verilog y se ejecutará en la FPGA DE10-Lite, asegurando una operación secuencial y basada en una Máquina de Estados Finitos (FSM) para gestionar los estados de ingreso, validación y visualización de resultados. <br/>
 RTL VIEWER: <br/>
+
+<br/>
 
 ### 4. Mostramos la wave del testbench: <br/>
 ![image](https://github.com/user-attachments/assets/6b0c5f18-49d3-4678-b444-ccdddb63a4a9)
