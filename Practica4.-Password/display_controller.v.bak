@@ -1,0 +1,107 @@
+module display_controller (
+    input clk, // reloj
+			 rst,  // reset
+    input [9:0] SW,   // switches para ingresar la contraseña
+    output [6:0] seg, // segmentos del display
+    output [3:0] an   // anodos para selección de dígito
+);
+
+    typedef enum logic [2:0] {IDLE, P_DIG, S_DIG, T_DIG, DONE, ERROR} state_t;
+    state_t state, next_state;
+    
+    logic [3:0] digit [3:0]; // almacena los 4 dígitos a mostrar
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            state <= IDLE;
+        else
+            state <= next_state;
+    end
+
+    always_comb begin
+        next_state = state;
+        case (state)
+            IDLE: begin
+                if (SW == 0)
+                    next_state = IDLE;
+                else if (SW[2])
+                    next_state = P_DIG;
+                else
+                    next_state = ERROR;
+            end
+            P_DIG: begin
+                if (SW[0])
+                    next_state = S_DIG;
+                else
+                    next_state = ERROR;
+            end
+            S_DIG: begin
+                if (SW[1])
+                    next_state = T_DIG;
+                else
+                    next_state = ERROR;
+            end
+            T_DIG: begin
+                if (SW[0])
+                    next_state = DONE;
+                else
+                    next_state = ERROR;
+            end
+            DONE: begin
+                if (SW == 0)
+                    next_state = IDLE;
+            end
+            ERROR: begin
+                if (SW == 0)
+                    next_state = IDLE;
+            end
+        endcase
+    end
+
+    always_comb begin
+        case (state)
+            DONE: begin
+                digit[3] = 4'd13; // D
+                digit[2] = 4'd0;  // O
+                digit[1] = 4'd14; // N
+                digit[0] = 4'd15; // E
+            end
+            ERROR: begin
+                digit[3] = 4'd14; // E
+                digit[2] = 4'd17; // R
+                digit[1] = 4'd17; // R
+                digit[0] = 4'd0;  // O
+            end
+            default: begin
+                digit[3] = 4'd10; // Apagar display
+                digit[2] = 4'd10;
+                digit[1] = 4'd10;
+                digit[0] = 4'd10;
+            end
+        endcase
+    end
+
+    function logic [6:0] seg_decoder(input logic [3:0] value);
+        case (value)
+            4'd0:  seg_decoder = 7'b0000001; // O
+            4'd10: seg_decoder = 7'b1111111; // Display apagado
+            4'd13: seg_decoder = 7'b0100001; // D
+            4'd14: seg_decoder = 7'b0110001; // E
+            4'd15: seg_decoder = 7'b1000110; // N
+            4'd17: seg_decoder = 7'b1110000; // R
+            default: seg_decoder = 7'b1111111;
+        endcase
+    endfunction
+
+    logic [1:0] scan;
+    always_ff @(posedge clk) scan <= scan + 1;
+
+    always_comb begin
+        case (scan)
+            2'b00: begin seg = seg_decoder(digit[0]); an = 4'b1110; end
+            2'b01: begin seg = seg_decoder(digit[1]); an = 4'b1101; end
+            2'b10: begin seg = seg_decoder(digit[2]); an = 4'b1011; end
+            2'b11: begin seg = seg_decoder(digit[3]); an = 4'b0111; end
+        endcase
+    end
+endmodule
