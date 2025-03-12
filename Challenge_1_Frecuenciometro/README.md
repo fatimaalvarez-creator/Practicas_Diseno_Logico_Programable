@@ -37,23 +37,24 @@ La frecuencia se calcula como: <br/>
 T = 1/f -> f = 1/T,  <br/>
 Donde T es el período medido en ciclos del reloj de 50 MHz.
 RTL VIEWER: <br/>
-![image](https://github.com/user-attachments/assets/70d7c77b-a429-4b62-9e2f-72c4d0affe22)
- <br/>
 
-### 4. Integración del sistema <br/>
+<br/>
+
+### 4. Conversión a BCD y Visualización en Displays <br/>
+La frecuencia medida se convierte de binario a BCD y se muestra en los displays de 7 segmentos de la FPGA. <br/>
+
+### 5. Integración del sistema <br/>
 El sistema opera de la siguiente manera: <br/>
 * El contador mide la cantidad de ciclos en el intervalo de tiempo definido. <br/>
 * Se calcula la frecuencia dividiendo la cantidad de ciclos entre el tiempo de medición. <br/>
 * La frecuencia calculada se convierte a BCD. <br/>
 * La información se envía a los displays para su visualización. <br/>
 RTL VIEWER: <br/>
-![image](https://github.com/user-attachments/assets/4c916b62-03d4-482b-a4a7-aec1caa08be9)
 <br/>
 
 ### 5. Mostramos la wave del TestBench: <br/>
-![image](https://github.com/user-attachments/assets/9a8ac560-17da-4147-a36b-b1593b275bea)
-![image](https://github.com/user-attachments/assets/ec94584e-1cfb-453a-94a4-5260c01fe2d0)
- <br/>
+
+<br/>
 
 ## CONCLUSIÓN: <br/>
 En esta práctica, implementamos un frecuencímetro digital en Verilog para la FPGA DE10-Lite, capaz de medir señales en un rango de 10 Hz a 100 kHz con un error de precisión del 1%. Se integraron módulos de contador de ciclos de señal entrada, cálculos para la frecuenica, conversión a BCD y visualización en 7 segmentos.
