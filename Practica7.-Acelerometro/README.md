@@ -42,10 +42,10 @@ Diseñar un sistema en Verilog para la FPGA Intel 10M50DAF484G7C que permita lee
    * Se instancia un módulo para la conversión y despliegue de los datos en los displays.  
   
 ### RTL VIEWER:  
-![image](https://github.com/user-attachments/assets/xyz123)  
+![image](https://github.com/user-attachments/assets/4c579ad0-0285-46b2-bb65-1f34a02e7ea2)
   
 5. Mostramos la wave del testbench:  
-![Captura de pantalla](https://github.com/user-attachments/assets/xyz456)  
+![image](https://github.com/user-attachments/assets/4eed16bd-0d23-42bb-8709-a33f61e67bb4)
   
 ## *CONCLUSIÓN:*  
 Este diseño permite capturar, procesar y visualizar datos del acelerómetro en la FPGA DE10-Lite. Se implementa una comunicación SPI eficiente con un reloj derivado para la sincronización de datos. La información obtenida se muestra en los displays de 7 segmentos, facilitando la interpretación de la orientación del sensor en tiempo real. El sistema es flexible y puede adaptarse para futuras aplicaciones en robótica y control de movimiento.
