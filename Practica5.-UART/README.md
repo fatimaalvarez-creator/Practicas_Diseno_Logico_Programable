@@ -1,4 +1,4 @@
-# Práctica 2. UART con Paridad en Verilog  
+# Práctica 5. UART
 Fátima Álvarez Nuño  
 A01645815  
 14/03/25  
