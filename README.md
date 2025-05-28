@@ -1,6 +1,6 @@
 # 🧩 Diseño con Lógica Programable
 
-Este repositorio contiene el conjunto de prácticas desarrolladas en la materia **Diseño con Lógica Programable**, enfocada en el uso de lenguajes de descripción de hardware (HDL) y plataformas FPGA para implementar módulos digitales funcionales. Se abordan desde decodificadores simples hasta periféricos complejos como UART, VGA, y acelerómetros.
+Este repositorio contiene el conjunto de prácticas desarrolladas en la materia **Diseño con Lógica Programable**, enfocada en el uso de lenguajes de descripción de hardware (HDL) y plataformas FPGA (10M50DAF484C7G) para implementar módulos digitales funcionales. Se abordan desde decodificadores simples hasta periféricos complejos como UART, VGA, y acelerómetros.
 
 ## 📦 Contenido del repositorio
 
