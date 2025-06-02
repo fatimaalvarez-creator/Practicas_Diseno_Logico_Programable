@@ -28,7 +28,6 @@ Y finalmente el examen, en el que se realizaron 2 prácticas:
 - 🔬 **ModelSim** para simulaciones  
 - 📺 **DE10-Lite** FPGA Board  
 - 💻 **Verilog HDL**  
-- 🧪 **GTKWAVE / SignalTap** (para depuración)  
 - 🧰 Periféricos: displays, teclado matricial, UART, acelerómetro, VGA, servos
 
 ## 📂 Estructura de cada práctica
