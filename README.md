@@ -33,6 +33,7 @@ Y finalmente el examen, en el que se realizaron 2 prácticas:
 
 ## 📂 Estructura de cada práctica
 
+```
 /[nombre_practica]/
 │
 ├── src/ → Código fuente en Verilog
@@ -40,4 +41,5 @@ Y finalmente el examen, en el que se realizaron 2 prácticas:
 ├── docs/ → Reporte o bitácora técnica
 ├── fpga/ → Archivos para programación en la FPGA
 └── img/ → Diagramas, capturas de simulación o funcionamiento
+```
 
